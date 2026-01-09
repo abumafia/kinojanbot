@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 // SOZLAMALAR
 const BOT_TOKEN = '8554385155:AAGLJ4-GOlP_768TuAkne8OH4PX7dAnXW6g';
-const MONGODB_URL = 'mongodb+srv://abumafia0:abumafia0@abumafia.h1trttg.mongodb.net/kitoblar_db?appName=abumafia';
+const MONGODB_URL = 'mongodb+srv://abumafia0:abumafia0@abumafia.h1trttg.mongodb.net/kitoblardb?appName=abumafia';
 
 // Bir nechta admin
 const ADMIN_IDS = [6606638731, 901126203];
