@@ -159,7 +159,7 @@ bot.action('check_subscription', async (ctx) => {
 });
 
 // Barcha admin tugmalari va handlerlar (oldingi kod bilan bir xil)
-bot.hears('🎬 Kino qoʻshish', (ctx) => {
+bot.hears('🎬 Multfilm qoʻshish', (ctx) => {
     if (!isAdmin(ctx.from.id)) return;
     ensureSession(ctx);
     ctx.session.addingMovie = true;
@@ -286,7 +286,7 @@ bot.on('text', async (ctx) => {
             ctx.session.waitingForCode = false;
             ctx.session.movieData = null;
 
-            return ctx.reply(`✅ ${code} kodli kino muvaffaqiyatli saqlandi!`);
+            return ctx.reply(`✅ ${code} kodli multfilm muvaffaqiyatli saqlandi!`);
         } catch (err) {
             return ctx.reply('Saqlashda xatolik yuz berdi.');
         }
@@ -323,7 +323,7 @@ bot.on('text', async (ctx) => {
     }
 
     await ctx.replyWithVideo(movie.file_id, {
-        caption: movie.caption || `🎬 multfilm kodi: ${movie.code}`
+        caption: movie.caption || `🎬 Multfilm kodi: ${movie.code}`
     });
 });
 
